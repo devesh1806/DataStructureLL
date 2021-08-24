@@ -13,7 +13,7 @@ public class LinkedListRunner {
 		Scanner sc = new Scanner(System.in);
 		int flag = 0;
 		while (true) {
-			System.out.println("Enter 1.Add 2.Append 3.Insert Between 4.Delete First 5.Delete Last 6.exit");
+			System.out.println("Enter 1.Add 2.Append 3.Insert Between 4.Delete First 5.Delete Last 6.Search 7.exit");
 			int choice = sc.nextInt();
 			switch(choice) {
 				case 1:
@@ -53,6 +53,11 @@ public class LinkedListRunner {
 					break;
 				
 				case 6:
+					
+					myLinked.searchElement(30);
+					break;
+					
+				case 7:
 					flag = 1;
 					break;
 					

@@ -1,6 +1,6 @@
 package com.datastructurell;
 
-public class MyLinkedList {
+public class MyLinkedList <E> {
 	private INode head;
 	private INode tail;
 	
@@ -59,6 +59,17 @@ public class MyLinkedList {
 		temp.setNext(null);
 	}
 	
+	public void searchElement(E key) {
+		INode temp = head;
+		while( temp != null ) {
+			if (temp.getKey() == key) {
+				System.out.println(key + " is present in the Linked List. ");
+				break;
+			}
+			temp = temp.getNext();
+		}
+	}
+	
 	public void printList() {
 		StringBuffer printformat = new StringBuffer("My Nodes: ");
 		INode temp = this.head;
@@ -69,6 +80,6 @@ public class MyLinkedList {
 			}
 			temp = temp.getNext();
 		}
-		System.out.print(printformat);
+		System.out.println(printformat);
 	}
 }
