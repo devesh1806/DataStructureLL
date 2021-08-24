@@ -68,7 +68,6 @@ public class MyLinkedList <E> {
 			}
 			temp = temp.getNext();
 		}
-		System.out.println(key + " not in Linked List");
 	}
 	
 	public void insertElementAfter(E element, E key) {
@@ -95,7 +94,16 @@ public class MyLinkedList <E> {
 			}
 			temp = temp.getNext();
 		}
-		System.out.println(key + " not in Linked List");
+	}
+	
+	public int size() {
+		int iterator = 0;
+		INode temp = head;
+		while (temp != null) {
+			iterator++;
+			temp = temp.getNext();
+		}
+		return iterator;
 	}
 	
 	public void printList() {

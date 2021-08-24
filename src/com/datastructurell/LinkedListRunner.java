@@ -64,6 +64,13 @@ public class LinkedListRunner {
 					break;
 					
 				case 8:
+					System.out.println("Size before deletion is " + myLinked.size());
+					myLinked.deleteElement(40);
+					myLinked.printList();
+					System.out.println("Size after deletion is " + myLinked.size());
+					break;
+					
+				case 9:
 					flag = 1;
 					break;
 					
