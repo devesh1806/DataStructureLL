@@ -45,6 +45,11 @@ public class MyLinkedList {
 		
 	}
 	
+	public void deleteFirst() {
+		INode temp = head.getNext();
+		head = temp;
+	}
+	
 	public void printList() {
 		StringBuffer printformat = new StringBuffer("My Nodes: ");
 		INode temp = this.head;
