@@ -13,7 +13,8 @@ public class LinkedListRunner {
 		Scanner sc = new Scanner(System.in);
 		int flag = 0;
 		while (true) {
-			System.out.println("Enter 1.Add 2.Append 3.Insert Between 4.Delete First 5.Delete Last 6.Search 7.exit");
+			System.out.println("Enter 1.Add 2.Append 3.Insert Between 4.Delete First "
+					+ "5.Delete Last 6.Search 7.Insert Element After 30 8.Delete Element 9.exit");
 			int choice = sc.nextInt();
 			switch(choice) {
 				case 1:
@@ -58,6 +59,11 @@ public class LinkedListRunner {
 					break;
 					
 				case 7:
+					myLinked.insertElementAfter(30,40);
+					myLinked.printList();
+					break;
+					
+				case 8:
 					flag = 1;
 					break;
 					

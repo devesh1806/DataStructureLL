@@ -62,12 +62,40 @@ public class MyLinkedList <E> {
 	public void searchElement(E key) {
 		INode temp = head;
 		while( temp != null ) {
-			if (temp.getKey() == key) {
+			if (temp.getKey().equals(key)) {
 				System.out.println(key + " is present in the Linked List. ");
 				break;
 			}
 			temp = temp.getNext();
 		}
+		System.out.println(key + " not in Linked List");
+	}
+	
+	public void insertElementAfter(E element, E key) {
+		MyNode<E> insertNode = new MyNode<E>(key);
+		INode temp = head;
+		while( temp != null ) {
+			if (temp.getKey().equals(element)) {
+				INode tempLast = temp.getNext();
+				temp.setNext(insertNode);
+				insertNode.setNext(tempLast);
+				break;
+			}
+			temp = temp.getNext();
+		}
+	}
+	
+	public void deleteElement(E key) {
+		INode temp = head;
+		while (temp.getNext() != null) {
+			if ((temp.getNext().getKey()).equals(key)) {
+				INode tempLast = temp.getNext().getNext();
+				temp.setNext(tempLast);
+				break;
+			}
+			temp = temp.getNext();
+		}
+		System.out.println(key + " not in Linked List");
 	}
 	
 	public void printList() {
