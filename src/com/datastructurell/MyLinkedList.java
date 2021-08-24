@@ -5,6 +5,7 @@ public class MyLinkedList {
 	private INode tail;
 	
 	public MyLinkedList() {
+		
 		this.head = null;
 		this.tail = null;
 	}
