@@ -1,4 +1,5 @@
 package com.datastructurell;
+import java.util.Scanner;
 
 public class LinkedListRunner {
 	public static void main(String[] args) {
@@ -9,9 +10,29 @@ public class LinkedListRunner {
 		
 		MyLinkedList myLinked = new MyLinkedList();
 		
-		myLinked.add(thirdNode);
-		myLinked.add(secondNode);
-		myLinked.add(firstNode);
-		myLinked.printList();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter 1.Add 2.Append");
+		int choice = sc.nextInt();
+		switch(choice) {
+			case 1:
+
+				myLinked.add(thirdNode);
+				myLinked.add(secondNode);
+				myLinked.add(firstNode);
+				myLinked.printList();
+				break;
+				
+			case 2:
+
+				myLinked.append(firstNode);
+				myLinked.append(secondNode);
+				myLinked.append(thirdNode);
+				myLinked.printList();
+				break;
+				
+			default:
+				System.out.println("Enter valid choice");
+				break;
+		}
 	}
 }

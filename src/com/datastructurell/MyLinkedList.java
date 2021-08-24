@@ -24,6 +24,19 @@ public class MyLinkedList {
 		}
 	}
 	
+	public void append(INode myNode) {
+		if (this.head == null) {
+			this.head = myNode;
+		}
+		if (this.tail == null) {
+			this.tail = myNode;
+		}
+		else {
+			this.tail.setNext(myNode);
+			this.tail = myNode;
+		}
+	}
+	
 	public void printList() {
 		StringBuffer printformat = new StringBuffer("My Nodes: ");
 		INode temp = this.head;
