@@ -1,7 +1,4 @@
 package com.datastructurell;
-import java.util.LinkedList;
-
-import com.linkedlist.MyNode;
 
 public class LinkedListRunner {
 	public static void main(String[] args) {
@@ -10,7 +7,11 @@ public class LinkedListRunner {
 		MyNode<Integer> secondNode = new MyNode<Integer>(30);
 		MyNode<Integer> thirdNode = new MyNode<Integer>(70);
 		
-		LinkedList myLinked = new LinkedList();
+		MyLinkedList myLinked = new MyLinkedList();
 		
+		myLinked.add(thirdNode);
+		myLinked.add(secondNode);
+		myLinked.add(firstNode);
+		myLinked.printList();
 	}
 }

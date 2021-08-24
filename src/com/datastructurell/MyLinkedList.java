@@ -9,4 +9,31 @@ public class MyLinkedList {
 		this.head = null;
 		this.tail = null;
 	}
+	
+	public void add(INode myNode) {
+		if (this.head == null) {
+			this.head = myNode;
+		}
+		if (this.tail == null) {
+			this.tail = myNode;
+		}
+		else {
+			INode tempNode = this.head;
+			this.head = myNode;
+			this.head.setNext(tempNode);
+		}
+	}
+	
+	public void printList() {
+		StringBuffer printformat = new StringBuffer("My Nodes: ");
+		INode temp = this.head;
+		while (temp != null) {
+			printformat.append(temp.getKey());
+			if ( temp != tail) {
+				printformat.append("->");
+			}
+			temp = temp.getNext();
+		}
+		System.out.print(printformat);
+	}
 }
