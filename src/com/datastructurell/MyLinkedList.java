@@ -50,6 +50,15 @@ public class MyLinkedList {
 		head = temp;
 	}
 	
+	public void deleteLast() {
+		INode temp = head;
+		while(temp.getNext() != tail) {
+			temp = temp.getNext();
+		}
+		tail=temp;
+		temp.setNext(null);
+	}
+	
 	public void printList() {
 		StringBuffer printformat = new StringBuffer("My Nodes: ");
 		INode temp = this.head;
