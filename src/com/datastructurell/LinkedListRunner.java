@@ -11,7 +11,7 @@ public class LinkedListRunner {
 		MyLinkedList myLinked = new MyLinkedList();
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter 1.Add 2.Append");
+		System.out.println("Enter 1.Add 2.Append 3.Insert Between");
 		int choice = sc.nextInt();
 		switch(choice) {
 			case 1:
@@ -30,6 +30,14 @@ public class LinkedListRunner {
 				myLinked.printList();
 				break;
 				
+			case 3:
+				
+				myLinked.append(firstNode);
+				myLinked.append(thirdNode);
+				myLinked.insertElement(secondNode);
+				myLinked.printList();
+				break;
+						
 			default:
 				System.out.println("Enter valid choice");
 				break;
