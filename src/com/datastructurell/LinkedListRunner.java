@@ -9,12 +9,14 @@ public class LinkedListRunner {
 		MyNode<Integer> thirdNode = new MyNode<Integer>(70);
 		
 		MyLinkedList myLinked = new MyLinkedList();
+		SortedLinkedList mySortedLinked = new SortedLinkedList();
 		
 		Scanner sc = new Scanner(System.in);
 		int flag = 0;
 		while (true) {
 			System.out.println("Enter 1.Add 2.Append 3.Insert Between 4.Delete First "
-					+ "5.Delete Last 6.Search 7.Insert Element After 30 8.Delete Element 9.exit");
+					+ "5.Delete Last 6.Search 7.Insert Element After 30 8.Delete Element "
+					+ "9.Ordered Linked List 10.exit");
 			int choice = sc.nextInt();
 			switch(choice) {
 				case 1:
@@ -71,6 +73,15 @@ public class LinkedListRunner {
 					break;
 					
 				case 9:
+					MyNode<Integer> newNode = new MyNode<Integer>(40);
+					mySortedLinked.add(firstNode);
+					mySortedLinked.add(secondNode);
+					mySortedLinked.add(newNode);
+					mySortedLinked.add(thirdNode);
+					mySortedLinked.printSortedList();
+					break;
+					
+				case 10:
 					flag = 1;
 					break;
 					
